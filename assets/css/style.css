@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+#weather-input {
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#searchbtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#history {
+    list-style-type: none;
+    padding: 0;
+}
+
+#history li {
+    margin-bottom: 10px;
+}
+
+.weather {
+    flex: 1;
+    padding: 20px;
+}
+
+.current-stats {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.weather5days {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure cards do not wrap to the next line */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.weatherCards {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.card {
+    flex: 0 0 150px; /* Adjust the width as needed */
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+h1 {
+    margin-top: 20px; /* Add some space at the top */
+    text-align: center; /* Center the text */
+}
