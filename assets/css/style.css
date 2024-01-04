@@ -1,17 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #aed6f1;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #aed6f1;
+    padding: 10px;
 }
 
 #weather-input {
     width: 300px;
     padding: 20px;
     background-color: #f0f0f0;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 #searchbtn {
@@ -19,10 +31,16 @@ body {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #4caf50;
+    background-color: #5499c7;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#searchbtn:hover {
+    background-color: #3b5998;
 }
 
 #history {
@@ -34,21 +52,40 @@ body {
     margin-bottom: 10px;
 }
 
+#history li button {
+    background-color: #5499c7;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#history li button:hover {
+    background-color: #3b5998;
+}
+
 .weather {
     flex: 1;
     padding: 20px;
+    background-color: #aed6f1;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .current-stats {
     background-color: #e0e0e0;
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .weather5days {
     display: flex;
-    flex-wrap: nowrap; /* Ensure cards do not wrap to the next line */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 20px;
 }
 
 .weatherCards {
@@ -58,11 +95,12 @@ body {
 }
 
 .card {
-    flex: 0 0 150px; /* Adjust the width as needed */
+    flex: 0 0 150px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
     background-color: #f0f0f0;
     margin-right: 10px;
+    border-radius: 10px;
 }
 
 .card:last-child {
@@ -70,6 +108,8 @@ body {
 }
 
 h1 {
-    margin-top: 20px; /* Add some space at the top */
-    text-align: center; /* Center the text */
+    text-align: center;
+    color: #5499c7;
+    margin-top: 20px;
+    font-size: 2em;
 }
